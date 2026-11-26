@@ -32,11 +32,8 @@ export function evaluateGuess(secret, guess)
         }
     }
 
-    const response = {
-        "CorrectPosition" : ```${correctPosition}```,
-        "WrongPosition" : ```${wrongPosition}```
-    }
-
-    return Response.json(response);
-    
+    return {
+        correctPosition,
+        wrongPosition
+    };
 }
