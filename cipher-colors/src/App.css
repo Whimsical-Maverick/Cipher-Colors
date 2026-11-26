@@ -1,0 +1,22 @@
+.guess-slots {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.guess-slot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.guess-slot.empty {
+  border: 2px dashed #64748b;
+  background-color: transparent;
+}
+
+.guess-slot.filled {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.25);
+}
