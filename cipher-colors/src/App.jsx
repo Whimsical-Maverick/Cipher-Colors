@@ -26,11 +26,24 @@ function App() {
         }
         setCurrGuess([...currGuess,colorName])
    }
+
+  const handleSubmit = () => {
+    alert(`Submitted guess: ${currGuess.join(", ")}`)
+  }
+
   return (
     <div className="game"> 
       <GameHeader attempt = {1}></GameHeader>
       <GuessSlots currGuess = {currGuess}></GuessSlots>
       <ColorPalette onPick = {onPick}></ColorPalette>
+      <button
+        type="button"
+        className="submit-btn"
+        onClick={handleSubmit}
+        disabled={currGuess.length !== CODE_LENGTH}
+      >
+        Submit Guess
+      </button>
     </div>
   )
 }
