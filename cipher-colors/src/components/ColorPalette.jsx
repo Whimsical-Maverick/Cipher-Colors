@@ -8,13 +8,16 @@ export default function ColorPalette({ onPick }) {
           key={color.name}
           type="button"
           className="color-btn"
+          title={color.name}
           aria-label={`Pick ${color.name}`}
-          style={{ backgroundColor: color.hex }}
+          style={{
+            backgroundColor: color.hex,
+            "--btn-color": color.hex,
+          }}
           onClick={() => onPick(color.name)}
-        >
-          {color.name}
-        </button>
-      ))}
+        />
+      ))
+      }
     </div>
   );
 }
